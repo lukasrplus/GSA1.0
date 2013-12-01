@@ -1,0 +1,60 @@
+h3 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+
+h2
+{
+  font-family: 'Open Sans', sans-serif;
+   text-align: center;
+   color: white;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+    background-image: url('sand.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+
+.logo {
+  margin-left: auto ;
+  margin-right: auto ;
+  width: 320px;
+}
+
+
+
+.form {
+  margin-left: auto ;
+  margin-right: auto ;
+  text-align: center;
+}
+
+.form-control {
+  width: 250px;
+  margin: 10px;
+}
+
+
+.form-control:focus {
+  border-color: #a22425;
+    outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(170, 45, 42, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(170, 45, 42, 0.6);
+}
+
+.canvas {
+  background-color: rgba(0,0,0,0.6);
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+ /* margin-top: 50px;*/
+  padding: 50px 0 50px 0;
+}
+
+
+
