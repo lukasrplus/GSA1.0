@@ -32,11 +32,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @user }
+        session[:u_id] = @user.id
+        format.html { redirect_to @user, notice: 'Welcome to GSA.' }
+
       else
         format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+
       end
     end
   end

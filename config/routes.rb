@@ -7,6 +7,8 @@ GSA10::Application.routes.draw do
 
   post "/sessions" => 'sessions#create'
 
+  get "/logout" => 'sessions#logout'
+
 
 
 
