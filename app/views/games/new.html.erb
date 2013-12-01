@@ -1,0 +1,22 @@
+<h1>Create a new match</h1>
+<h2>Make a new match suggestion to your friends</h2>
+
+<%= form_tag games_url do %>
+
+  <%= hidden_field_tag 'player1_id', session[:u_id] %>
+
+  <h3><%= label_tag 'date', 'On which day do you want to play?' %></h3>
+  <%= date_field_tag 'date' %>
+
+
+  <h3><%= label_tag 'time', 'At what time?' %></h3>
+  <%= time_field_tag 'time' %>
+
+
+  <h3><%= label_tag 'location', 'Finally, please tell your friends where you want to play?' %></h3>
+  <%= text_field_tag 'location' %>
+
+
+  <%= submit_tag 'Confirm' %>
+
+<% end %>

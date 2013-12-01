@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+
+<h2><%= @user.name %>, this is your profile</h2>
+
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -11,6 +14,30 @@
 </p>
 
 
-
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+
+<h2>Your Game Invitations:</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organizer</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= User.find_by(:id => game.player1_id).name %></td>
+        <td><%= game.date.strftime("%d.%B %Y") %></td>
+        <td><%= game.time.strftime("%H:%M") %></td>
+        <td><%= game.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
