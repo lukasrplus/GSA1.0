@@ -1,6 +1,15 @@
 class GamesController < ApplicationController
 
 
+
+def index
+
+  @games = Game.where(:player1_id => session[:u_id])
+
+end
+
+
+
 def new
 end
 
@@ -14,8 +23,12 @@ game.time = params[:time]
 game.location = params[:location]
 game.save
 
-redirect_to users_url
+redirect_to new_invitation_url
 
+end
+
+
+def show
 end
 
 

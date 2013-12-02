@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invitee1: MyString
+  invitee2: MyString
+  invitee3: MyString
+  invitee4: MyString
+  invitee5: MyString
+  game_id: 1
+
+two:
+  invitee1: MyString
+  invitee2: MyString
+  invitee3: MyString
+  invitee4: MyString
+  invitee5: MyString
+  game_id: 1

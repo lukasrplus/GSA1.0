@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201222232) do
+ActiveRecord::Schema.define(version: 20131201235433) do
 
   create_table "games", force: true do |t|
     t.integer  "player1_id"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20131201222232) do
     t.time     "time"
     t.string   "location"
     t.boolean  "confirmed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invitations", force: true do |t|
+    t.string   "invitee1"
+    t.string   "invitee2"
+    t.string   "invitee3"
+    t.string   "invitee4"
+    t.string   "invitee5"
+    t.integer  "game_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
