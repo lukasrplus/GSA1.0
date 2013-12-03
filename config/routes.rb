@@ -18,7 +18,7 @@ GSA10::Application.routes.draw do
   get "games/index" => 'games#index', as: 'games'
 
   get "/games/new" => 'games#new', as: 'new_game'
-  post "/games" => 'games#create'
+  post "/games" => 'games#create', as: 'create_game'
 
   get "game/:id" => 'games#show', as: 'game'
 
