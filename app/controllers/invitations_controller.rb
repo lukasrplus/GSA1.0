@@ -17,6 +17,11 @@ redirect_to user_url(session[:u_id])
 
 end
 
+def show
+@inivtations = Invitation.where(:id => params[:id])
+
+end
+
 
 
 end

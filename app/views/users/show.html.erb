@@ -27,6 +27,7 @@
       <th>Date</th>
       <th>Time</th>
       <th>Location</th>
+      <th>Invitations</th>
     </tr>
   </thead>
 
@@ -37,6 +38,7 @@
         <td><%= game.date.strftime("%d.%B %Y") %></td>
         <td><%= game.time.strftime("%H:%M") %></td>
         <td><%= game.location %></td>
+        <td><%= link_to "See who you invited for that game", game_url(game.id) %></td>
       </tr>
     <% end %>
   </tbody>

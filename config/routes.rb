@@ -27,5 +27,7 @@ GSA10::Application.routes.draw do
   get "invitations/new" => 'invitations#new', as: 'new_invitation'
   post "invitations" => 'invitations#create'
 
+  get "invitations/:id" => 'invitations#show', as: 'invitation'
+
 
 end

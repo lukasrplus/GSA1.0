@@ -29,6 +29,10 @@ end
 
 
 def show
+  @game = Game.find_by(:id => params[:id])
+  @invitations = Invitation.where(:game_id => @game.id)
+  @user = User.find_by(:id => @game.player1_id)
+
 end
 
 

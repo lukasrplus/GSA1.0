@@ -1,0 +1,17 @@
+<% if @user.id == session[:u_id] %>
+
+
+<h2>Your game on <%= @game.date.strftime("%d. %B %Y") %>, at <%= @game.time.strftime("%H:%M") %></h2>
+
+
+<h3>Location: <%= @game.location %></h3>
+
+<h3>Host: <%= @user.name %></h3>
+
+<h3>Number of invitations for that match: <%= @invitations.count %></h3>
+
+<% else %>
+
+<%= redirect_to root_url %>
+
+<% end %>
