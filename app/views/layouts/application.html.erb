@@ -13,11 +13,13 @@
 <%= link_to "Logout", logout_url %>
 <%= link_to "New User", new_user_url %>
 <%= link_to "New Match", new_game_url %>
-<%= link_to "New Invitation", new_invitation_url %>
+
 
 <% if session[:u_id].present? %>
 <% user = User.find_by(:id => session[:u_id]) %>
 <%= link_to user.name, user_url(user.id) %>
+<% else %>
+<%= link_to "Login", root_url %>
 <% end %>
 
 

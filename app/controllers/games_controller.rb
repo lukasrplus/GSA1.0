@@ -23,7 +23,8 @@ game.time = params[:time]
 game.location = params[:location]
 game.save
 
-redirect_to new_invitation_url
+
+redirect_to "/invitations/new?game_id=#{game.id}"
 
 end
 
@@ -34,6 +35,8 @@ def show
   @user = User.find_by(:id => @game.player1_id)
 
 end
+
+
 
 
 

@@ -16,7 +16,7 @@
 <% @invitations.each do |invitation| %>
 <li><%= invitation.invite_email %></li>
 <% end %>
-<li><%= link_to "Invite another friend" %></li>
+<li><%= link_to "Invite another friend", "/invitations/new?game_id=#{@game.id}" %></li>
 </ul>
 
 

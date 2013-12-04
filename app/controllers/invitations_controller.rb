@@ -2,14 +2,15 @@ class InvitationsController < ApplicationController
 
 
 def new
+  @game = Game.find_by(:id => params[:game_id])
 end
 
 
 def create
-
+# HAS TO BE CHANGED TO FINDING THE RIGHT GAME CORRESPONDING TO THE PLAYER/USER
 invitation = Invitation.new
-game = Game.where(:player1_id => session[:u_id]).last
-invitation.game_id = game.id
+
+invitation.game_id = params[:game_id]
 invitation.invite_email = params[:invite_email]
 invitation.save
 
