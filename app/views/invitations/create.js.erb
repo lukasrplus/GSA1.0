@@ -1,1 +1,7 @@
-$(".new_game").append("<%= j(render 'invitations/invite_new_player', :game => @game) %>")
+$(".new_game").replaceWith("<%= j(render 'invitations/invite_new_player', :game => @game) %>")
+$(".player_invitation").fadeIn();
+
+// $(".new_game").slideUp();
+// $("<%= j(render 'invitations/invite_new_player', :game => @game) %>").appendTo(".player_invitation");
+// $(".player_invitation")slideDown();
+
