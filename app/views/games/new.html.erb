@@ -1,7 +1,10 @@
+
+<div class="new_game">
+
 <h1>Create a new match</h1>
 <h2>Make a new match suggestion to your friends</h2>
 
-<%= form_tag create_game_url do %>
+<%= form_tag create_game_url, remote: true, authenticity_token: true do %>
 
   <%= hidden_field_tag 'player1_id', session[:u_id] %>
 
@@ -20,3 +23,9 @@
   <%= submit_tag 'Confirm' %>
 
 <% end %>
+
+</div>
+
+
+
+

@@ -3,6 +3,11 @@ class InvitationsController < ApplicationController
 
 def new
   @game = Game.find_by(:id => params[:game_id])
+
+
+
+
+
 end
 
 

@@ -16,15 +16,29 @@ end
 
 def create
 
-game = Game.new
-game.player1_id = params[:player1_id]
-game.date = params[:date]
-game.time = params[:time]
-game.location = params[:location]
-game.save
+@game = Game.new
+@game.player1_id = params[:player1_id]
+@game.date = params[:date]
+@game.time = params[:time]
+@game.location = params[:location]
+@game.save
 
 
-redirect_to "/invitations/new?game_id=#{game.id}"
+
+  if @game.save
+        respond_to do |format|
+           format.html do
+             redirect_to "/invitations/new?game_id=#{game.id}"
+           end
+           format.js { render '/invitations/create.js.erb' }
+         end
+
+  else
+      # @errors = @t.errors.full_messages
+      # render 'new'
+  end
+
+
 
 end
 
