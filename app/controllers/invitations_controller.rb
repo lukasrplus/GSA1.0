@@ -20,7 +20,7 @@ def create
 end
 
 
-def add_invitation
+def group_invitation
 
    @game = Game.find_by(:id => params[:game_id])
 
@@ -29,7 +29,7 @@ def add_invitation
            format.html do
              redirect_to user_url(session[:u_id])
            end
-           format.js { render '/invitations/add_another_invitation_to_game.js.erb' }
+           format.js { render '/invitations/group_invitation.js.erb' }
         end
 
 
