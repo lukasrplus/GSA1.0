@@ -1,33 +1,4 @@
-
-<div class="single_player">
-
-<%= form_tag invitations_url do %>
-
-  <%= hidden_field_tag 'game_id', @game.id %>
-
-  <h3><%= label_tag 'Invite a friend'%></h3>
-  <%= text_field_tag 'invite_email' %>
-
-  <%= submit_tag 'Confirm' %>
-
-<% end %>
-
-</div>
-
-
-<div class="group_invitation">
-
-  <h4>Or invite a group of friends.</h4>
-
-</div>
-
-<div class="single_invitation" style="display:none">
-
-  <h4>Switch back to single invitation.</h4>
-
-</div>
-
-<div class="multiple_players" style="display:none">
+<div class="multiple_players">
 
 <%= form_tag invitations_url do %>
 
