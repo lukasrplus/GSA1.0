@@ -6,7 +6,7 @@
   <%= hidden_field_tag 'game_id', @game.id %>
 
   <h3><%= label_tag 'Invite a friend'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_0' %>
 
   <%= submit_tag 'Confirm' %>
 
@@ -17,39 +17,41 @@
 
 <div class="group_invitation">
 
-  <h4>Or invite a group of friends.</h4>
+  <h4 class="btn btn-success btn-sm">Or invite a group of friends.</h4>
 
 </div>
 
-<div class="single_invitation" style="display:none">
 
-  <h4>Switch back to single invitation.</h4>
-
-</div>
 
 <div class="multiple_players" style="display:none">
 
 <%= form_tag invitations_url do %>
 
-  <%= hidden_field_tag 'game_id', game.id %>
+  <%= hidden_field_tag 'game_id', @game.id %>
 
   <h3><%= label_tag 'Add Player 1'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_1' %>
 
   <h3><%= label_tag 'Add Player 2'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_2' %>
 
   <h3><%= label_tag 'Add Player 3'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_3' %>
 
   <h3><%= label_tag 'Add Player 4'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_4' %>
 
   <h3><%= label_tag 'Add Player 5'%></h3>
-  <%= text_field_tag 'invite_email' %>
+  <%= text_field_tag 'invite_email_5' %>
 
   <%= submit_tag 'Confirm' %>
 
 <% end %>
+
+</div>
+
+<div class="single_invitation" style="display:none">
+
+  <h4 class="btn btn-success btn-sm">Switch back to single invitation.</h4>
 
 </div>
