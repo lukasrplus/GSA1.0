@@ -30,7 +30,7 @@ def create
            format.html do
              redirect_to "/invitations/new?game_id=#{game.id}"
            end
-           format.js { render '/invitations/create.js.erb' }
+           format.js { render '/invitations/add_invitation_to_game.js.erb' }
          end
 
   else
