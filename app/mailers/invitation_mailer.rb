@@ -74,4 +74,22 @@ class InvitationMailer < ActionMailer::Base
 
   end
 
+  def confirm_player1(organizer, invitation, game)
+
+    @player1 = organizer
+
+    @invitation = invitation
+
+    @game = game
+
+    mail to: organizer.email, :subject => "Your match has been confirmed!"
+
+  end
+
+  def confirm_player2
+
+  end
+
+
+
 end

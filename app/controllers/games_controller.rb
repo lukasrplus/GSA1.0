@@ -52,17 +52,21 @@ end
 
 def set_match
 
-invitation = Invitation.find_by(:id => params[:invitation_id])
-@game = Game.find_by(:id => invitation.game_id)
-@user = User.find_by(:id => @game.player1_id)
+  @invitation = Invitation.find_by(:id => params[:invitation_id])
+  @game = Game.find_by(:id => @invitation.game_id)
+  @user = User.find_by(:id => @game.player1_id)
 
 end
 
 def update
 
-  game = Game.find_by(:id => params[:id])
-  game.confirmed = true
-  game.save
+  @game = Game.find_by(:id => params[:id])
+  @game.confirmed = true
+  @game.save
+  @player1 = User.find_by(:id => @game.player1_id)
+  @invitation = Invitation.find_by(:id => params[:invitation_id])
+
+  InvitationMailer.confirm_player1(@player1, @invitation, @game).deliver
 
   redirect_to root_url
 

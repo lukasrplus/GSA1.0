@@ -9,4 +9,9 @@
 <h2>Just click here to confirm this match.</h2>
 <h4><%= @user.name %> will be informed automatically.</h4>
 
-<%= link_to "I'm in!", update_game_url(@game.id), method: 'patch'  %>
+
+<%= form_tag update_game_url(@game.id), method: 'patch' %>
+
+<%= hidden_field_tag :invitation_id, @invitation.id %>
+
+<%= submit_tag "I'm in!" %>
