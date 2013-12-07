@@ -50,6 +50,14 @@ def show
 
 end
 
+def set_match
+
+invitation = Invitation.find_by(:id => params[:invitation_id])
+@game = Game.find_by(:id => invitation.game_id)
+@user = User.find_by(:id => @game.player1_id)
+
+end
+
 
 
 

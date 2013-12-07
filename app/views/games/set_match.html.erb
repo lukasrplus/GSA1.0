@@ -1,0 +1,12 @@
+<h1><%= @user.name %>, has suggested to play Tennis with him.</h1>
+
+<h2>Here are the details of the match:</h2>
+
+<h3>Date: <%= @game.date.strftime("%d. %B %Y") %></h3>
+<h3>Time: <%= @game.time.strftime("%H:%M") %></h3>
+<h3>Location: <%= @game.location %></h3>
+
+<h2>Just click here to confirm this match.</h2>
+<h4><%= @user.name %> will be informed automatically.</h4>
+
+<button>I'm in!</button>

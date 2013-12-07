@@ -90,21 +90,21 @@ end
 # end
 
 
-def group_invitation
+# def group_invitation
 
-   @game = Game.find_by(:id => params[:game_id])
-
-
-        respond_to do |format|
-           format.html do
-             redirect_to user_url(session[:u_id])
-           end
-           format.js { render '/invitations/group_invitation.js.erb' }
-        end
+#    @game = Game.find_by(:id => params[:game_id])
 
 
+#         respond_to do |format|
+#            format.html do
+#              redirect_to user_url(session[:u_id])
+#            end
+#            format.js { render '/invitations/group_invitation.js.erb' }
+#         end
 
-end
+
+
+# end
 
 
 
