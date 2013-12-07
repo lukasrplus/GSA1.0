@@ -9,4 +9,4 @@
 <h2>Just click here to confirm this match.</h2>
 <h4><%= @user.name %> will be informed automatically.</h4>
 
-<button>I'm in!</button>
+<%= link_to "I'm in!", update_game_url(@game.id), method: 'patch'  %>

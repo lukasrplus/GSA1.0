@@ -24,6 +24,8 @@ GSA10::Application.routes.draw do
 
   get "games/set_match/:invitation_id" => 'games#set_match'
 
+  patch "game/:id" => 'games#update', as: 'update_game'
+
 
   # INVITATIONS CONTROLLER
   get "invitations/new" => 'invitations#new', as: 'new_invitation'
@@ -33,6 +35,8 @@ GSA10::Application.routes.draw do
   get "invitations/group_invitation" => 'invitations#group_invitation'
 
   get "invitations/:id" => 'invitations#show', as: 'invitation'
+
+
 
 
 

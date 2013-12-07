@@ -58,6 +58,17 @@ invitation = Invitation.find_by(:id => params[:invitation_id])
 
 end
 
+def update
+
+  game = Game.find_by(:id => params[:id])
+  game.confirmed = true
+  game.save
+
+  redirect_to root_url
+
+
+end
+
 
 
 
