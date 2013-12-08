@@ -4,7 +4,15 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+
+    user = User.find_by(:id => session[:u_id])
+    if user.admin
     @users = User.all
+    else
+    redirect_to root_url
+    end
+
+
   end
 
   # GET /users/1
