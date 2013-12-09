@@ -10,5 +10,15 @@
  *
  *= require_self
  *= require_yeti
+ *= require jquery.ui.datepicker
+ *= require jquery.timepicker
  *= require_tree .
  */
+
+body {
+  padding-top: 150px;
+}
+
+.well {
+  width: 50%;
+}

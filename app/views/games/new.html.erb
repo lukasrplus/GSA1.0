@@ -1,35 +1,50 @@
 
-
 <div class="new_game">
+  <div class="well">
+    <h2>Schedule a Match</h2>
 
-<h1>Create a new match</h1>
-<h2>Make a new match suggestion to your friends</h2>
+    <%= form_tag create_game_url, remote: true, authenticity_token: true do %>
 
-<%= form_tag create_game_url, remote: true, authenticity_token: true do %>
+      <%= hidden_field_tag 'player1_id', session[:u_id] %>
 
-  <%= hidden_field_tag 'player1_id', session[:u_id] %>
-
-  <h3><%= label_tag 'date', 'On which day do you want to play?' %></h3>
-  <%= date_field_tag 'date' %>
-
-
-  <h3><%= label_tag 'time', 'At what time?' %></h3>
-  <%= time_field_tag 'time' %>
+      <%= label_tag 'date', 'When do you want to play?' %><br>
+      <%= text_field_tag 'date', nil, class: 'datepicker', placeholder: "Date" %>
 
 
-  <h3><%= label_tag 'location', 'Finally, please tell your friends where you want to play?' %></h3>
-  <%= text_field_tag 'location' %>
+      <% label_tag 'time' %>
+      <%= text_field_tag 'time', nil, class: 'timepicker', placeholder: "Time" %>
 
+      <br><br>
+      <%= label_tag 'location', 'Where do you want to play?' %><br>
+      <%= text_field_tag 'location', nil, size: "50", placeholder: 'i.e. "Lincoln Park Tennis Courts"' %>
+      <h4>Let's invite some friends...</h4>
 
-  <%= submit_tag 'Confirm' %>
+      <%= submit_tag 'Next', class: "btn btn-info btn-sm" %>
 
-<% end %>
-
+    <% end %>
+  </div>
 </div>
 
 
 
+<body>
 
+
+<!--   <div class="container">
+    <div class="well">
+      <h2>Schedule a Match</h2>
+      <form action="#">
+        <p>When do you want to play?</p>
+        <p><input type="text" id="datepicker" placeholder="Date"></p>
+        <p><input type="text" id="stepExample2" placeholder="Time"></p>
+        <p>Where do you want to play?</p>
+        <p><input type="text" placeholder="i.e. 'Lincoln Park Tennis Courts'" size="50"></p>
+        <h5>Let's invite some friends...</h5>
+        <p><input type="submit" value="Next" class="btn btn-info btn-sm"></p>
+      </form>
+     </div>
+  </div>
+</body> -->
 
 
 

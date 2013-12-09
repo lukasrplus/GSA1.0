@@ -1,3 +1,6 @@
+
+
+
 <p id="notice"><%= notice %></p>
 
 
@@ -25,29 +28,32 @@
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
+<% if @game.present? %>
+  <h2>Your Game Invitations:</h2>
 
-<h2>Your Game Invitations:</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Organizer</th>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Location</th>
-      <th>Invitations</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @games.each do |game| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= User.find_by(:id => game.player1_id).name %></td>
-        <td><%= game.date.strftime("%d.%B %Y") %></td>
-        <td><%= game.time.strftime("%H:%M") %></td>
-        <td><%= game.location %></td>
-        <td><%= link_to "See who you invited for that game", game_url(game.id) %></td>
+        <th>Organizer</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Invitations</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+
+    <tbody>
+      <% @games.each do |game| %>
+        <tr>
+          <td><%= User.find_by(:id => game.player1_id).name %></td>
+          <td><%= game.date.strftime("%d.%B %Y") %></td>
+          <td><%= game.time.strftime("%H:%M") %></td>
+          <td><%= game.location %></td>
+          <td><%= link_to "See who you invited for that game", game_url(game.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+  </table>
+<% end %>

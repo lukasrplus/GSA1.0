@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require jquery.timepicker.js
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+$( ".datepicker" ).datepicker();
+$( ".timepicker").timepicker({ step: "15" });
+  });
+
