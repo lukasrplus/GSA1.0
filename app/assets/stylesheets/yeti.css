@@ -4751,10 +4751,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
- /* right: 0;
-  left: 0;*/
+  right: 0;
+  left: 0;
   z-index: 1030;
-  width: inherit;
+ /* width: inherit;*/
 }
 
 @media (min-width: 768px) {
