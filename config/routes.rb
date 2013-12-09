@@ -11,7 +11,7 @@ GSA10::Application.routes.draw do
 
   # SESSIONS CONTROLLER
   post "/sessions" => 'sessions#create'
-  get "/logout" => 'sessions#logout'
+  get "/logout" => 'sessions#logout', as: 'end_session'
 
 
   # GAMES CONTROLLER

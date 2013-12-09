@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 source 'https://rubygems.org'
 
+gem 'jquery-ui-rails'
 
 # gem "bcrypt-ruby", "~> 3.0.0"
 
