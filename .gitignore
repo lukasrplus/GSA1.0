@@ -16,3 +16,4 @@
 /tmp
 
 /config/email.yml
+/config/twilio.yml

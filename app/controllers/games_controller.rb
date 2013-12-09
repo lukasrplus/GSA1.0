@@ -66,7 +66,25 @@ def update
   @player1 = User.find_by(:id => @game.player1_id)
   @invitation = Invitation.find_by(:id => params[:invitation_id])
 
+  date = @game.date.strftime("%d. %B %Y")
+
   InvitationMailer.confirm_player1(@player1, @invitation, @game).deliver
+
+  client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+
+      # Create and send an SMS message
+      client.account.sms.messages.create(
+        from: TWILIO_CONFIG['from'],
+        to: @player1.phone,
+        body: "Hey #{@player1.name}, your match on #{date} at #{@game.location} has been accepted by #{@invitation.invite_email}. Enjoy! GameSetApp"
+      )
+
+
+
+
+
+
+
 
   redirect_to root_url
 
