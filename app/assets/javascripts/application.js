@@ -17,8 +17,5 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-$( ".datepicker" ).datepicker();
-$( ".timepicker").timepicker({ step: "15" });
-  });
+
 

@@ -28,7 +28,9 @@
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
-<% if @game.present? %>
+
+<% if @games.present? %>
+
   <h2>Your Game Invitations:</h2>
 
   <table>
@@ -47,7 +49,7 @@
       <% @games.each do |game| %>
         <tr>
           <td><%= User.find_by(:id => game.player1_id).name %></td>
-          <td><%= game.date.strftime("%d.%B %Y") %></td>
+          <td><%= game.date.strftime("%d. %B %Y") %></td>
           <td><%= game.time.strftime("%H:%M") %></td>
           <td><%= game.location %></td>
           <td><%= link_to "See who you invited for that game", game_url(game.id) %></td>
@@ -56,4 +58,6 @@
     </tbody>
 
   </table>
+
 <% end %>
+
