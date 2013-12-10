@@ -3,7 +3,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="col-md-6" id="test">
+<div class="row">
+
+<div class="col-md-3" id="test">
 
 <!-- <h2><%= @user.name %>, this is your profile</h2> -->
 
@@ -28,7 +30,9 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %>
 
+</div>
 
+<div class="col-md-9">
 
 <% if @games.present? %>
 
@@ -72,5 +76,7 @@
 
 <% end %>
 
-</div>
+</div><!-- END OF SECOND COL- 6 -->
+
+</div><!-- END OF ROW -->
 

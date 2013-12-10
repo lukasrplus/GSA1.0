@@ -17,6 +17,7 @@
 
 body {
   padding-top: 150px;
+ /* background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2NkYGD4D8QgwAil0SmwPEiSaIUwE0Aa0E2Fi+GUgNoEl8fmLqxOIVshsjtR3IxsIkHPEB08RCkEAGr1Egd7c7TnAAAAAElFTkSuQmCC) repeat;*/
 }
 
 .well {
@@ -27,3 +28,5 @@ body {
 /*#test {
   background-color: green;
 }*/
+
+
