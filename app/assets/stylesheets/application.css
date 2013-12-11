@@ -18,6 +18,11 @@
 body {
   padding-top: 150px;
  /* background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2NkYGD4D8QgwAil0SmwPEiSaIUwE0Aa0E2Fi+GUgNoEl8fmLqxOIVshsjtR3IxsIkHPEB08RCkEAGr1Egd7c7TnAAAAAElFTkSuQmCC) repeat;*/
+background-image:url('http://farm4.staticflickr.com/3823/11325645825_e3f11b0db9_o.jpg');
+background-position: cover;
+background-attachment: fixed;
+/*background-size: 100% auto;*/
+background-repeat: no-repeat;
 }
 
 .well {
@@ -29,4 +34,38 @@ body {
   background-color: green;
 }*/
 
+
+.content_box {
+  background-color: rgba(255,255,255,0.6);
+  padding: 30px;
+}
+
+table {
+  background-color: rgba(255,255,255,1.0);
+}
+
+.success {
+  background-color: #1fc17b;
+}
+
+td {
+  font-weight: bold;
+}
+
+.fa-check-circle-o {
+  color: green;
+}
+
+.fa-clock-o {
+  color: blue;
+}
+
+
+
+
+
+/*.fa-li {
+position: relative;
+left: 0;
+}*/
 
