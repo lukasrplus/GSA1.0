@@ -15,7 +15,6 @@
 //= require jquery.ui.datepicker
 //= require jquery.timepicker.js
 //= require fancybox
-//= require turbolinks
 //= require_tree .
 
 
