@@ -12,6 +12,7 @@
  *= require_yeti
  *= require jquery.ui.datepicker
  *= require jquery.timepicker
+ *= require fancybox
  *= require_tree .
  */
 
@@ -35,6 +36,14 @@ h3 {
 
 .nav_link_self {
   padding-top: 15px;
+}
+
+#lightbox {
+  width: 400px;
+}
+
+a.fancybox-item.fancybox-close:hover{
+  background-color: rgba(255,255,255,0.0);
 }
 
 /*.navbar-default {

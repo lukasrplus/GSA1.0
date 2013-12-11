@@ -14,8 +14,31 @@
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require jquery.timepicker.js
+//= require fancybox
 //= require turbolinks
 //= require_tree .
+
+
+
+
+ // $(document).ready(function() {
+ //  $('li#login_click_box').on("click", function() {
+ //    $('#login_box').slideToggle('fast');
+
+ //   return false;
+ //  });});
+
+
+$(document).ready(function() {
+  $("a.fancybox").fancybox({
+});
+});
+
+
+// $(document).ready(function(){
+//   alert('Fackkking JS');
+// });
+
 
 
 

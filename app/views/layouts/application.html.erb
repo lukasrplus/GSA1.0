@@ -6,7 +6,10 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
 </head>
+
+
 
 
 
@@ -25,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="http://farm4.staticflickr.com/3759/11241577276_ff96a23855_o.jpg" width="200" height="50" alt="gsa_mail"></a>
+          <a class="navbar-brand" href="/"><img src="http://farm4.staticflickr.com/3759/11241577276_ff96a23855_o.jpg" width="200" height="50" alt="gsa_mail"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +40,7 @@
                 <li class="nav_link_self"><%= link_to "New Match", new_game_url %></li>
                 <li class="nav_link_self"><%= link_to "Logout", end_session_url %></li>
               <% else %>
-                <li class="nav_link_self"><%= link_to "Login", root_url %></li>
+                <li class="nav_link_self"><%= link_to "Login", "#lightbox", :class => "fancybox" %>%></li>
                 <li class="nav_link_self"><%= link_to "New User", new_user_url %></li>
               <% end %>
 
@@ -53,26 +56,61 @@
 </header>
 
 
- </div>
+</div>
 
 <body>
+
+
+ <div id="lightbox" style="display:none">
+
+
+          <h2>Welcome back!</h2>
+
+
+
+          <%= form_tag sessions_url do %>
+
+           <div class="form-group">
+            <h3><%= label_tag 'email', 'Email' %></h3>
+            <%= text_field_tag 'email', nil, class: "form-control"%>
+          </div>
+
+
+           <div class="form-group">
+            <h3><%= label_tag 'password', 'Password' %></h3>
+            <%= password_field_tag 'password', nil, class: "form-control" %>
+          </div>
+
+          <div class="col-md-4 col-md-offset-4">
+            <%= submit_tag 'LOGIN', class: "btn btn-info" %>
+          </div>
+
+          <% end %>
+
+
+ </div>
+
+
+
+
+
+
+
+
 <div class="container">
 
-<%#= link_to "Logout", logout_url %>
-<%#= link_to "New User", new_user_url %>
-<%#= link_to "New Match", new_game_url %>
+ <!-- NEW TEST OF SLIDE DOWN -->
 
 
-<%# if session[:u_id].present? %>
-<%# user = User.find_by(:id => session[:u_id]) %>
-<%#= link_to user.name, user_url(user.id) %>
-<%# else %>
-<%#= link_to "Login", root_url %>
-<%# end %>
+
+<!-- END OF NEW TEST OF SLIDE DOWN -->
 
 
 <%= yield %>
 
 </div> <!-- END OF CONTAINER -->
+
 </body>
+
+
 </html>

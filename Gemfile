@@ -4,6 +4,7 @@ ruby '2.0.0'
 source 'https://rubygems.org'
 
 
+gem 'fancybox2-rails'
 
 gem 'jquery-ui-rails'
 
