@@ -14,38 +14,49 @@
   <% end %>
 
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<div class="row">
+
+  <div class="col-md-6">
+
+      <div class="form-goup">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, class: "form-control"%>
+      </div>
+
+
+      <div class="form-goup">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+
+
+      <div class="form-goup">
+        <%= f.label :phone %><br>
+        <%= f.telephone_field :phone, class: "form-control" %>
+      </div>
+
   </div>
 
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="col-md-6">
+
+      <div class="form-goup">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+
+       <div class="form-goup">
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign me up and start a match for me!", class: "btn btn-info" %>
+      </div>
+
   </div>
 
-
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.telephone_field :phone %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-
-   <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 
 
 <% end %>

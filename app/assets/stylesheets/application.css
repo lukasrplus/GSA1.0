@@ -25,8 +25,25 @@ background-attachment: fixed;
 background-repeat: no-repeat;
 }
 
+h3 {
+  margin: 15px 0px 15px 0px;
+}
+
 .well {
   width: 50%;
+}
+
+.nav_link_self {
+  padding-top: 15px;
+}
+
+/*.navbar-default {
+  background-color: black;
+  border-color: black;
+}*/
+
+label {
+  font-weight: bold;
 }
 
 
@@ -58,6 +75,10 @@ td {
 
 .fa-clock-o {
   color: blue;
+}
+
+.actions {
+  margin-top: 10px;
 }
 
 

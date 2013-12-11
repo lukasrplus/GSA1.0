@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GameSetApp</a>
+          <a class="navbar-brand" href="#"><img src="http://farm4.staticflickr.com/3759/11241577276_ff96a23855_o.jpg" width="200" height="50" alt="gsa_mail"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,12 +33,12 @@
           <ul class="nav navbar-nav">
               <% if session[:u_id].present? %>
                 <% user = User.find_by(:id => session[:u_id]) %>
-                <li><%= link_to user.name, user_url(user.id) %></li>
-                <li><%= link_to "New Match", new_game_url %></li>
-                <li><%= link_to "Logout", end_session_url %></li>
+                <li class="nav_link_self"><%= link_to user.name, user_url(user.id) %></li>
+                <li class="nav_link_self"><%= link_to "New Match", new_game_url %></li>
+                <li class="nav_link_self"><%= link_to "Logout", end_session_url %></li>
               <% else %>
-                <li><%= link_to "Login", root_url %></li>
-                <li><%= link_to "New User", new_user_url %></li>
+                <li class="nav_link_self"><%= link_to "Login", root_url %></li>
+                <li class="nav_link_self"><%= link_to "New User", new_user_url %></li>
               <% end %>
 
           </ul>

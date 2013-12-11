@@ -1,18 +1,20 @@
 
-<div class="single_player">
+<div class="well" id="single_player">
+
+<h3>Step 3: Invite a friend for this game</h3>
 
 <%= form_tag invitations_url do %>
 
   <%= hidden_field_tag 'game_id', @game.id %>
 
-  <h3><%= label_tag 'Invite a friend'%></h3>
-  <%= text_field_tag 'invite_email_0' %>
+  <h3><%= label_tag 'Email address:'%></h3>
+  <%= text_field_tag 'invite_email_0', nil, placeholder: "e.g. john@mcenroe.com" %>
 
-  <%= submit_tag 'Confirm' %>
+  <%= submit_tag 'Send invitation', class: "btn btn-info btn-sm" %>
 
 <% end %>
 
-</div>
+
 
 
 <div class="group_invitation">
@@ -21,9 +23,13 @@
 
 </div>
 
+</div>
 
 
-<div class="multiple_players" style="display:none">
+
+<div class="well" id="multiple_players" style="display:none">
+
+<h3>Step 3: Invite up to 5 friends for this game</h3>
 
 <%= form_tag invitations_url do %>
 
@@ -44,14 +50,17 @@
   <h3><%= label_tag 'Add Player 5'%></h3>
   <%= text_field_tag 'invite_email_5' %>
 
-  <%= submit_tag 'Confirm' %>
+  <%= submit_tag 'Send invitation', class: "btn btn-info btn-sm" %>
 
 <% end %>
 
-</div>
+
 
 <div class="single_invitation" style="display:none">
 
   <h4 class="btn btn-success btn-sm">Switch back to single invitation.</h4>
+
+</div>
+
 
 </div>

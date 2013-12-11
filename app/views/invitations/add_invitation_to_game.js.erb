@@ -2,16 +2,16 @@ $(".new_game").replaceWith("<%= j(render 'invitations/invite_new_player', :game 
 
 
 $('.group_invitation').click(function(){
-        $('.multiple_players').slideToggle('slow');
+        $('#multiple_players').slideToggle('slow');
         $('.group_invitation').hide();
-        $('.single_player').hide();
+        $('#single_player').hide();
         $('.single_invitation').fadeIn();
     });
 
 $('.single_invitation').click(function(){
-        $('.multiple_players').slideUp('slow');
-        $('.group_invitation').show();
-        $('.single_player').show();
+        $('#multiple_players').hide('slow');
+        $('.group_invitation').show('slow');
+        $('#single_player').show('slow');
         $('.single_invitation').hide();
     });
 
