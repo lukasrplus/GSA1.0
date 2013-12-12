@@ -15,26 +15,28 @@ $( ".timepicker").timepicker({ step: "30", minTime: "8am" });
 <div class="container">
 
 <div class="new_game">
-  <div class="well">
+  <div class="content_box">
     <h2>Step 2: Schedule a Match</h2>
 
     <%= form_tag create_game_url, remote: true, authenticity_token: true do %>
 
       <%= hidden_field_tag 'player1_id', session[:u_id] %>
 
+      <div class="form-group">
       <%= label_tag 'date', 'When do you want to play?' %><br>
       <%= text_field_tag 'date', nil, class: 'datepicker', placeholder: "Date" %>
 
-
       <% label_tag 'time' %>
       <%= text_field_tag 'time', nil, class: 'timepicker', placeholder: "Time" %>
+      </div>
 
-      <br><br>
+      <div class="form-group">
       <%= label_tag 'location', 'Where do you want to play?' %><br>
       <%= text_field_tag 'location', nil, size: "50", placeholder: 'i.e. "Lincoln Park Tennis Courts"' %>
+      </div>
       <h4>Let's invite some friends...</h4>
 
-      <%= submit_tag 'Next', class: "btn btn-info btn-sm" %>
+      <%= submit_tag 'Next', class: "btn btn-default" %>
 
     <% end %>
   </div>

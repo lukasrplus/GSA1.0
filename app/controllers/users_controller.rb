@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:u_id] = @user.id
-        format.html { redirect_to @user, notice: 'Welcome to GSA.' }
+        format.html { redirect_to new_game_url }
 
       else
         format.html { render action: 'new' }

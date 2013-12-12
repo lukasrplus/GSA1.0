@@ -1,3 +1,7 @@
+<div class="container">
+
+<div class="content_box">
+
 <% if @game.confirmed != true %>
 
 <h1><%= @user.name %>, has suggested to play Tennis with him.</h1>
@@ -8,15 +12,18 @@
 <h3>Time: <%= @game.time.strftime("%H:%M") %></h3>
 <h3>Location: <%= @game.location %></h3>
 
-<h2>Just click here to confirm this match.</h2>
-<h4><%= @user.name %> will be informed automatically.</h4>
-
 
 <%= form_tag update_game_url(@game.id), method: 'patch' %>
 
 <%= hidden_field_tag :invitation_id, @invitation.id %>
 
-<%= submit_tag "I'm in!" %>
+<%= submit_tag "I'm in!", class: "btn btn-default btn-lg" %>
+
+<br>
+<br>
+
+
+<p><%= @user.name %> will be informed automatically.</p>
 
 <% else %>
 
@@ -27,3 +34,7 @@
 <button>Invite my friends to play tennis.</button>
 
 <% end %>
+
+</div>
+
+</div>

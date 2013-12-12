@@ -1,5 +1,5 @@
 
-<div class="well" id="single_player">
+<div class="content_box" id="single_player">
 
 <h3>Step 3: Invite a friend for this game</h3>
 
@@ -7,10 +7,13 @@
 
   <%= hidden_field_tag 'game_id', @game.id %>
 
-  <h3><%= label_tag 'Email address:'%></h3>
-  <%= text_field_tag 'invite_email_0', nil, placeholder: "e.g. john@mcenroe.com" %>
 
-  <%= submit_tag 'Send invitation', class: "btn btn-info btn-sm" %>
+<div class="form-group">
+  <h3><%= label_tag 'Email address:'%></h3>
+  <%= text_field_tag 'invite_email_0', nil, placeholder: "e.g. john@mcenroe.com", class: "form-control" %>
+</div>
+
+  <%= submit_tag 'Send invitation', class: "btn btn-default btn-sm" %>
 
 <% end %>
 
@@ -19,7 +22,7 @@
 
 <div class="group_invitation">
 
-  <h4 class="btn btn-success btn-sm">Or invite a group of friends.</h4>
+  <h4 class="btn btn-info btn-sm">Or invite a group of friends.</h4>
 
 </div>
 
@@ -27,7 +30,7 @@
 
 
 
-<div class="well" id="multiple_players" style="display:none">
+<div class="content_box" id="multiple_players" style="display:none">
 
 <h3>Step 3: Invite up to 5 friends for this game</h3>
 
@@ -35,22 +38,32 @@
 
   <%= hidden_field_tag 'game_id', @game.id %>
 
+  <div class="form-group">
   <h3><%= label_tag 'Add Player 1'%></h3>
-  <%= text_field_tag 'invite_email_1' %>
+  <%= text_field_tag 'invite_email_1', nil, class: "form-control" %>
+  </div>
 
+  <div class="form-group">
   <h3><%= label_tag 'Add Player 2'%></h3>
-  <%= text_field_tag 'invite_email_2' %>
+  <%= text_field_tag 'invite_email_2', nil, class: "form-control" %>
+  </div>
 
+  <div class="form-group">
   <h3><%= label_tag 'Add Player 3'%></h3>
-  <%= text_field_tag 'invite_email_3' %>
+  <%= text_field_tag 'invite_email_3', nil, class: "form-control" %>
+  </div>
 
+  <div class="form-group">
   <h3><%= label_tag 'Add Player 4'%></h3>
-  <%= text_field_tag 'invite_email_4' %>
+  <%= text_field_tag 'invite_email_4', nil, class: "form-control" %>
+  </div>
 
+  <div class="form-group">
   <h3><%= label_tag 'Add Player 5'%></h3>
-  <%= text_field_tag 'invite_email_5' %>
+  <%= text_field_tag 'invite_email_5', nil, class: "form-control" %>
+  </div>
 
-  <%= submit_tag 'Send invitation', class: "btn btn-info btn-sm" %>
+  <%= submit_tag 'Send invitation', class: "btn btn-default" %>
 
 <% end %>
 
@@ -58,7 +71,7 @@
 
 <div class="single_invitation" style="display:none">
 
-  <h4 class="btn btn-success btn-sm">Switch back to single invitation.</h4>
+  <h4 class="btn btn-info btn-sm">Switch back to single invitation.</h4>
 
 </div>
 
