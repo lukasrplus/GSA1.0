@@ -5,5 +5,5 @@ end
 
 
 TWILIO_SID = Rails.env.development? ? TWILIO_CONFIG['sid'] : ENV['TWILIO_SID']
-TWILIO_TOKEN = Rails.env.development ? TWILIO_CONFIG['token'] : ENV['TWILIO_TOKEN']
-TWILIO_FROM = Rails.env.development ? TWILIO_CONFIG['from'] : ENV['TWILIO_FROM']
+TWILIO_TOKEN = Rails.env.development? ? TWILIO_CONFIG['token'] : ENV['TWILIO_TOKEN']
+TWILIO_FROM = Rails.env.development? ? TWILIO_CONFIG['from'] : ENV['TWILIO_FROM']
