@@ -79,11 +79,11 @@ def update
 
   InvitationMailer.confirm_player1(@player1, @invitation, @game).deliver
 
-  client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+  client = Twilio::REST::Client.new(TWILIO_SID, TWILIO_TOKEN)
 
       # Create and send an SMS message
       client.account.sms.messages.create(
-        from: TWILIO_CONFIG['from'],
+        from: TWILIO_FROM,
         to: @player1.phone,
         body: "Hey #{@player1.name}, your match on #{date} at #{@game.location} has been accepted by #{@invitation.invite_email}. Enjoy! GameSetApp"
       )
@@ -99,6 +99,7 @@ def update
 
 
 end
+
 
 
 

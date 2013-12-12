@@ -1,6 +1,10 @@
 
+<div class="container">
 
-<div class="well">
+<div class="content_box">
+
+<div class="row">
+<div class="col-md-6">
 
 <h3>Your game on <%= @game.date.strftime("%d. %B %Y") %>, at <%= @game.time.strftime("%H:%M") %></h3>
 
@@ -22,4 +26,23 @@
 
 </div>
 
+<div class="col-md-6" id="game_status">
 
+<% if @game.confirmed == true %>
+
+  <i class="fa-check-circle-o fa-lg"></i>
+
+<% else %>
+
+  <i class="fa-clock-o fa-lg"></i>
+
+<% end %>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>

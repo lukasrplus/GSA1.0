@@ -4,9 +4,8 @@
 
 <% if @game.confirmed != true %>
 
-<h1><%= @user.name %>, has suggested to play Tennis with him.</h1>
+<h1><%= @user.name %>, suggests this match.</h1>
 
-<h2>Here are the details of the match:</h2>
 
 <h3>Date: <%= @game.date.strftime("%d. %B %Y") %></h3>
 <h3>Time: <%= @game.time.strftime("%H:%M") %></h3>
@@ -23,7 +22,7 @@
 <br>
 
 
-<p><%= @user.name %> will be informed automatically.</p>
+<p><%= @user.name %> is looking forward to playing with you.</p>
 
 <% else %>
 
