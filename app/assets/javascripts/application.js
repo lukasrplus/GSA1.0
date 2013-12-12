@@ -20,12 +20,19 @@
 
 
 
- // $(document).ready(function() {
- //  $('li#login_click_box').on("click", function() {
- //    $('#login_box').slideToggle('fast');
+ $(document).ready(function() {
+  $('#cta1').on("click", function() {
+    $('#cta_landing').slideUp('slow').delay( 3000 );
+    $('#feature_section').fadeIn('slow');
+   // return false;
+  });});
 
- //   return false;
- //  });});
+  $(document).ready(function() {
+  $('#cta2').on("click", function() {
+    $('#feature_section').slideUp('slow').delay( 3000 );
+    $('#relax_section').fadeIn('slow');
+   // return false;
+  });});
 
 
 $(document).ready(function() {

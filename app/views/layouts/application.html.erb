@@ -33,12 +33,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img src="http://farm4.staticflickr.com/3759/11241577276_ff96a23855_o.jpg" width="200" height="50" alt="gsa_mail"></a>
+          <a class="navbar-brand" href="/">GameSetApp</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-right">
               <% if session[:u_id].present? %>
                 <% user = User.find_by(:id => session[:u_id]) %>
                 <li class="nav_link_self"><%= link_to user.name, user_url(user.id) %></li>
