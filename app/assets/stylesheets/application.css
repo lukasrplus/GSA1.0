@@ -143,6 +143,20 @@ h2 {
   margin: 30px 0px 30px 0px !important;
 }
 
+a.landing_link {
+  color: white !important;
+}
+
+a.landing_link:focus {
+  outline: none !important;
+}
+
+a.landing_link:hover {
+  text-decoration: none !important;
+  background-color: transparent;
+  color: black !important;
+}
+
 
 /*.row_break {
   height: 00px;
