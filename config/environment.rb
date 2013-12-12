@@ -25,5 +25,5 @@ ActionMailer::Base.smtp_settings = {
 
 
 
-end
+
 
