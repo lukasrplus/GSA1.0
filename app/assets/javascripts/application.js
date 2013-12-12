@@ -23,7 +23,7 @@
  $(document).ready(function() {
   $('#cta1').on("click", function() {
     $('#cta_landing').slideUp('slow').delay( 3000 );
-    $('#feature_section').fadeIn('slow');
+    $('#features').fadeIn('slow');
    // return false;
   });});
 
