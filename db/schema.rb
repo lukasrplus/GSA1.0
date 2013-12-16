@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209000516) do
+ActiveRecord::Schema.define(version: 20131216112252) do
 
   create_table "games", force: true do |t|
     t.integer  "player1_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20131209000516) do
     t.boolean  "confirmed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "private",    default: true
   end
 
   create_table "invitations", force: true do |t|
