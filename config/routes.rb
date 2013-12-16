@@ -36,6 +36,8 @@ GSA10::Application.routes.draw do
 
   get "invitations/:id" => 'invitations#show', as: 'invitation'
 
+  get "/admin" => 'pages#admin', as: 'admin'
+
 
 
 
