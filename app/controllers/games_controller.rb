@@ -88,14 +88,21 @@ def update
         body: "Hey #{@player1.name}, your match on #{date} at #{@game.location} has been accepted by #{@invitation.invite_email}. Enjoy! GameSetApp"
       )
 
-
-
-
-
-
-
-
   redirect_to root_url
+
+end
+
+def create_public_match
+
+ game = Game.find_by(:id => params[:game_id])
+ user = User.find_by(:id => game.player1_id)
+ game.private = false
+ game.save
+
+ redirect_to user_url(user.id)
+
+
+
 
 
 end

@@ -47,7 +47,7 @@
         <th>Date</th>
         <th>Time</th>
         <th>Location</th>
-        <th>Invitations</th>
+        <th class="td_invitation">Invitations</th>
       </tr>
     </thead>
 
@@ -56,25 +56,37 @@
       <% @games.each do |game| %>
         <tr>
 
-          <% if game.confirmed == true %>
 
-          <td>
-            <i class="fa fa-check-circle-o fa-lg"></i> Confirmed
-          </td>
+          <% if game.private %>
 
+                <% if game.confirmed == true %>
+
+                <td>
+                  <i class="fa fa-check-circle-o fa-lg"></i> Confirmed
+                </td>
+
+
+                <% else %>
+
+                <td>
+                  <i class="fa fa-coffee fa-lg"></i> Waiting
+                </td>
+
+                <% end %>
 
           <% else %>
 
-          <td>
-            <i class="fa fa-clock-o fa-lg"></i> Waiting
-          </td>
+                <td>
+                  <i class="fa fa-group fa-lg"></i> Public Match
+                </td>
 
           <% end %>
 
           <td><%= game.date.strftime("%d. %B %Y") %></td>
           <td><%= game.time.strftime("%H:%M") %></td>
           <td><%= game.location %></td>
-          <td><%= link_to "List of invitations", game_url(game.id) %></td>
+          <td class="td_invitation"><%= link_to "", game_url(game.id), class: "fa fa-file-text fa-lg" %></td>
+        <!--   <td><i class="fa fa-file-text fa-lg"></i><%= link_to "", game_url(game.id) %></td> -->
         </tr>
 
       <% end %>

@@ -109,15 +109,37 @@ table {
 }
 
 td {
-  font-weight: bold;
+  font-weight: lighter;
 }
+
+td a {
+  color: #a5a4a4;
+  font-weight: lighter;
+}
+
+td a:visited {
+  color: #a5a4a4;
+  font-weight: lighter;
+}
+
+td a:hover {
+  text-decoration: none;
+  color: #6ca841;
+  font-weight: lighter;
+}
+
 
 .fa-check-circle-o {
-  color: #30664A;
+  color: #80ab5e;
 }
 
-.fa-clock-o {
-  color: #303066;
+.fa-coffee {
+  color: #6fb8fc;
+}
+
+
+.fa-group{
+  color: #ff755a;
 }
 
 .actions {
@@ -176,5 +198,6 @@ a.landing_link:hover {
   margin-top: 300px;
 }
 
-
-
+.td_invitation {
+  text-align: center;
+}
