@@ -1,0 +1,39 @@
+<% if @game.confirmed != true %>
+
+<h1><%= @user.name %>, suggests this match.</h1>
+
+
+<h3>Date: <%= @game.date.strftime("%d. %B %Y") %></h3>
+<h3>Time: <%= @game.time.strftime("%H:%M") %></h3>
+<h3>Location: <%= @game.location %></h3>
+
+
+<%= form_tag update_game_url(@game.id), method: 'patch' %>
+
+<%= hidden_field_tag :invitation_id, @invitation.id %>
+
+<%= submit_tag "I'm in!", class: "btn btn-default btn-lg" %>
+
+<br>
+<br>
+
+
+<p><%= @user.name %> is looking forward to playing with you.</p>
+
+</div>
+
+</div>
+
+<% else %>
+
+<div class="container">
+
+<div class="content_box">
+
+<h1>Sorry, <%= @user.name %> has already found a partner for his next game.</h1>
+
+<h2>Click below to set up your own match.</h2>
+
+<button>Invite my friends to play tennis.</button>
+
+<% end %>

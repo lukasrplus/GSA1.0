@@ -198,6 +198,10 @@ a.landing_link:hover {
   margin-top: 300px;
 }
 
+.panel-body {
+  color: black;
+}
+
 /*.td_invitation {
   text-align: center;
 }*/

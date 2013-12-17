@@ -41,11 +41,14 @@ $(document).ready(function() {
 });
 });
 
-$(document).ready(function() {
-  $('.collapse').on("click", function(
-    $(this).collapse('hide');
-    ));
-});
+
+
+
+// $(document).ready(function() {
+//   $('.collapse').on("click", function(
+//     $(this).collapse('hide');
+//     ));
+// });
 
 
 

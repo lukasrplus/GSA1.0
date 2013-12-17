@@ -110,6 +110,13 @@ def lounge
 
 end
 
+def join_match
+
+  @game = Game.find_by(:id => params[:game_id])
+  @host = User.find_by(:id => @game.player1_id)
+
+
+end
 
 
 

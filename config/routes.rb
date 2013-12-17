@@ -22,13 +22,15 @@ GSA10::Application.routes.draw do
 
   get "game/:id" => 'games#show', as: 'game'
 
-  get "games/set_match/:invitation_id" => 'games#set_match'
+  get "games/set_match/:invitation_id" => 'games#set_match', as: 'set_match'
 
   patch "game/:id" => 'games#update', as: 'update_game'
 
   get 'create_public_match' => 'games#create_public_match', as:'create_public_match'
 
   get 'lounge' => 'games#lounge', as: 'lounge'
+
+  get 'games/join_match/:game_id' => 'games#join_match', as: 'join_match'
 
 
   # INVITATIONS CONTROLLER
