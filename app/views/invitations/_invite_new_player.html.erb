@@ -18,26 +18,36 @@
 
   <%= submit_tag 'Send invitation', class: "btn btn-default btn-sm" %>
 
-<% end %>
 
-
-
-<!-- POST MATCH TO LOUNGE -->
-
-<h3>Or post find a partner by posting this match into the GameSetApp Lounge:</h3>
-
-
-
-
-<!-- GROUP INVITATION FOR GAME -->
-
-<div class="group_invitation">
+  <div class="group_invitation">
 
   <h4 class="btn btn-info btn-sm">Or invite a group of friends.</h4>
 
 </div>
 
+<% end %>
+
+
+
+
+<!-- POST MATCH TO LOUNGE -->
+
+<h3>Or find a partner by posting this match into the GameSetApp Lounge:</h3>
+
+<% user = User.find_by(:id => session[:u_id]) %>
+
+<%= form_tag user_url(user.id) %>
+
+<%= hidden_field_tag 'game_id', @game.id %>
+
+<%= submit_tag 'Post match in public lounge', class: "btn btn-danger btn-sm" %>
+
 </div>
+
+<!-- GROUP INVITATION FOR GAME -->
+
+
+
 
 
 
