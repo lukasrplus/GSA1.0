@@ -15,6 +15,7 @@
 //= require jquery.ui.datepicker
 //= require jquery.timepicker.js
 //= require fancybox
+//= require transition
 //= require_tree .
 
 
@@ -39,6 +40,14 @@ $(document).ready(function() {
   $("a.fancybox").fancybox({
 });
 });
+
+$(document).ready(function() {
+  $('.collapse').on("click", function(
+    $(this).collapse('hide');
+    ));
+});
+
+
 
 
 // $(document).ready(function(){

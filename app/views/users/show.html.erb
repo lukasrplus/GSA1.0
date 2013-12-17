@@ -56,9 +56,6 @@
       <% @games.each do |game| %>
         <tr>
 
-
-          <% if game.private %>
-
                 <% if game.confirmed == true %>
 
                 <td>
@@ -74,19 +71,19 @@
 
                 <% end %>
 
-          <% else %>
-
-                <td>
-                  <i class="fa fa-group fa-lg"></i> Public Match
-                </td>
-
-          <% end %>
 
           <td><%= game.date.strftime("%d. %B %Y") %></td>
           <td><%= game.time.strftime("%H:%M") %></td>
           <td><%= game.location %></td>
-          <td class="td_invitation"><%= link_to "", game_url(game.id), class: "fa fa-file-text fa-lg" %></td>
-        <!--   <td><i class="fa fa-file-text fa-lg"></i><%= link_to "", game_url(game.id) %></td> -->
+
+           <% if game.private %>
+            <td class="td_invitation"><%= link_to "", game_url(game.id), class: "fa fa-file-text fa-lg" %> Private Match
+            </td>
+           <% else %>
+             <td class="td_invitation"><%= link_to "", lounge_url, class: "fa fa-group fa-lg" %> Public Match
+             </td>
+          <% end %>
+
         </tr>
 
       <% end %>

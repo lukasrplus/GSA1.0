@@ -28,6 +28,8 @@ GSA10::Application.routes.draw do
 
   get 'create_public_match' => 'games#create_public_match', as:'create_public_match'
 
+  get 'lounge' => 'games#lounge', as: 'lounge'
+
 
   # INVITATIONS CONTROLLER
   get "invitations/new" => 'invitations#new', as: 'new_invitation'

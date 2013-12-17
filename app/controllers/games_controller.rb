@@ -101,12 +101,14 @@ def create_public_match
 
  redirect_to user_url(user.id)
 
-
-
-
-
 end
 
+
+def lounge
+
+@games = Game.where(:private => false)
+
+end
 
 
 

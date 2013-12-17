@@ -113,7 +113,7 @@ td {
 }
 
 td a {
-  color: #a5a4a4;
+  color: white;
   font-weight: lighter;
 }
 
@@ -124,7 +124,7 @@ td a:visited {
 
 td a:hover {
   text-decoration: none;
-  color: #6ca841;
+  color: #a5a4a4;
   font-weight: lighter;
 }
 
@@ -134,12 +134,12 @@ td a:hover {
 }
 
 .fa-coffee {
-  color: #6fb8fc;
+  color: #ff755a;
 }
 
 
 .fa-group{
-  color: #ff755a;
+  color: white;
 }
 
 .actions {
@@ -198,6 +198,6 @@ a.landing_link:hover {
   margin-top: 300px;
 }
 
-.td_invitation {
+/*.td_invitation {
   text-align: center;
-}
+}*/
