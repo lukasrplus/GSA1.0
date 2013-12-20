@@ -3,9 +3,21 @@
 
   <div class="content_box">
 
-    <h1>Admin Interface</h1>
+    <h3>Admin Interface</h3>
 
-    <h2>Put admin info here.</h2>
+    <h4>Pleasw enter your admin password</h4>
+
+    <%= form_tag adminlogin_url, method: 'get' do %>
+
+    <%= password_field_tag :password %>
+
+    <br>
+    <br>
+
+
+    <%= button_tag "Enter as admin", class: "btn btn-danger btn-xs" %>
+
+    <% end %>
 
   </div>
 

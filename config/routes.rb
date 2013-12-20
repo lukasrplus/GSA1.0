@@ -44,6 +44,8 @@ GSA10::Application.routes.draw do
 
   get "/admin" => 'pages#admin', as: 'admin'
 
+  get '/adminlogin' => 'pages#adminlogin', as: 'adminlogin'
+
 
 
 

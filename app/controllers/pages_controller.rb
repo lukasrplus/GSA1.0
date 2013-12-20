@@ -9,6 +9,12 @@ end
 def admin
 end
 
+def adminlogin
+
+
+
+end
+
 
 
 end
